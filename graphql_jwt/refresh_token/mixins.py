@@ -10,9 +10,7 @@ from ..decorators import csrf_rotation, refresh_expiration, setup_jwt_cookie
 from ..settings import jwt_settings
 from . import signals
 from .decorators import ensure_refresh_token
-from .shortcuts import (
-    create_refresh_token, get_refresh_token, refresh_token_lazy,
-)
+from .shortcuts import get_refresh_token, refresh_token_lazy
 
 
 class RefreshTokenMixin:
@@ -45,11 +43,8 @@ class RefreshTokenMixin:
         token = jwt_settings.JWT_ENCODE_HANDLER(payload, context)
 
         if getattr(context, 'jwt_cookie', False):
-            context.jwt_refresh_token = create_refresh_token(
-                old_refresh_token.user,
-                old_refresh_token,
-            )
-            new_refresh_token = context.jwt_refresh_token.get_token()
+            context.jwt_refresh_token = old_refresh_token
+            new_refresh_token = refresh_token
         else:
             new_refresh_token = refresh_token_lazy(
                 old_refresh_token.user,
