@@ -1,12 +1,30 @@
 Changelog
 =========
 
+0.3.4
+-----
+
+* Added JSONWebTokenBackend.get_user method
+
+0.3.3
+-----
+
+* Added Graphene V2 support
+
+0.3.2
+-----
+
+* Added support for PyJWT>=2
+* Removed signals providing_args
+* Added JWT_COOKIE_SAMESITE setting
+* Added support for Graphene v3
+
 0.3.1
 -----
 
 * Set JWT-refresh-token cookie on tokenAuth mutation
 * Read token/refresh-token from cookies (TokenAuth, Refresh, Verify and Revoke mutations)
-* Add refreshExpiredIn field
+* Add refreshExpiresIn field
 * Add token payload to tokenAuth mutation
 * Add DeleteJSONWebTokenCookie and DeleteRefreshTokenCookie mutations
 * Add JWT_REUSE_REFRESH_TOKENS setting in order to reuse the refresh token instances

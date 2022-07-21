@@ -12,7 +12,7 @@ Authentication
         def resolve_viewer(self, info, **kwargs):
             user = info.context.user
             if not user.is_authenticated:
-                raise Exception('Authentication credentials were not provided')
+                raise Exception("Authentication credentials were not provided")
             return user
 
 
@@ -43,11 +43,11 @@ When a token is requested and ``jwt_cookie`` decorator is set, the response will
     from graphql_jwt.decorators import jwt_cookie
 
     urlpatterns = [
-        path('graphql/', jwt_cookie(GraphQLView.as_view())),
+        path("graphql/", jwt_cookie(GraphQLView.as_view())),
     ]
 
 
-If the ``jwt_cookie`` decorator is set, consider adding `CSRF middleware <https://docs.djangoproject.com/es/2.1/ref/csrf/>`_ ``'django.middleware.csrf.CsrfViewMiddleware'`` to provide protection against `Cross Site Request Forgeries <https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)>`_.
+If the ``jwt_cookie`` decorator is set, consider adding `CSRF middleware <https://docs.djangoproject.com/es/2.1/ref/csrf/>`_ ``"django.middleware.csrf.CsrfViewMiddleware"`` to provide protection against `Cross Site Request Forgeries <https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)>`_.
 
 A cookie-based authentication does not require sending the tokens as a mutation input argument.
 
@@ -66,8 +66,7 @@ Add mutations to the root schema::
         delete_token_cookie = graphql_jwt.DeleteJSONWebTokenCookie.Field()
 
         # Long running refresh tokens
-        delete_refresh_token_cookie = \
-            graphql_jwt.refresh_token.DeleteRefreshTokenCookie.Field()
+        delete_refresh_token_cookie = graphql_jwt.DeleteRefreshTokenCookie.Field()
 
 
     schema = graphene.Schema(mutation=Mutation)
@@ -108,7 +107,7 @@ Enable the argument authentication in your settings:
 ::
 
     GRAPHQL_JWT = {
-        'JWT_ALLOW_ARGUMENT': True,
+        "JWT_ALLOW_ARGUMENT": True,
     }
 
 

@@ -12,6 +12,7 @@ Contributors
 * William Mai, `@wmai <https://github.com/wmai>`_
 * Víðir Valberg Guðmundsson, `@valberg <https://github.com/valberg>`_
 * Patryk, `@patryk-tech <https://github.com/patryk-tech>`_
+* Philipp Metzler `@googol7 <https://github.com/googol7>`_
 * Christian González, `@nerdoc <https://github.com/nerdoc>`_
 * `@mr-asher <https://github.com/mr-asher>`_
 * Florian Schade, `@fschade <https://github.com/fschade>`_
@@ -21,4 +22,5 @@ Contributors
 * Kamil Rykowski, `@vintage <https://github.com/vintage>`_
 * `@mtszsobczak <https://github.com/mtszsobczak>`_
 * Lasse Steffen `@lassesteffen <https://github.com/lassesteffen>`_
+* Rainshaw `@RainshawGao <https://github.com/RainshawGao>`_
 * `@TitanFighter <https://github.com/TitanFighter>`_
